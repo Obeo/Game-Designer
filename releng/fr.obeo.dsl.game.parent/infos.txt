@@ -1,0 +1,7 @@
+https://cwiki.apache.org/confluence/display/MAVEN/OutOfMemoryError
+
+
+set MAVEN_OPTS=-Xmx512m -XX:MaxPermSize=128m
+
+
+https://wiki.eclipse.org/Eclipse_b3/aggregator/manual

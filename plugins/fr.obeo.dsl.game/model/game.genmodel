@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fr.obeo.dsl.game/src-gen" editDirectory="/fr.obeo.dsl.game.edit/src-gen"
+    editorDirectory="/fr.obeo.dsl.game.editor/src-gen" modelPluginID="fr.obeo.dsl.game"
+    modelName="Game" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    testsDirectory="/fr.obeo.dsl.game.tests/src-gen" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>game.ecore</foreignModel>
+  <genPackages prefix="Game" basePackage="fr.obeo.dsl" disposableProviderFactory="true"
+      ecorePackage="game.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="game.ecore#//Move">
+      <genEnumLiterals ecoreEnumLiteral="game.ecore#//Move/NONE"/>
+      <genEnumLiterals ecoreEnumLiteral="game.ecore#//Move/INPUT"/>
+      <genEnumLiterals ecoreEnumLiteral="game.ecore#//Move/BOUNCE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="game.ecore#//Orientation">
+      <genEnumLiterals ecoreEnumLiteral="game.ecore#//Orientation/TOP"/>
+      <genEnumLiterals ecoreEnumLiteral="game.ecore#//Orientation/BOTTOM"/>
+      <genEnumLiterals ecoreEnumLiteral="game.ecore#//Orientation/LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="game.ecore#//Orientation/RIGHT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="game.ecore#//Axis">
+      <genEnumLiterals ecoreEnumLiteral="game.ecore#//Axis/NONE"/>
+      <genEnumLiterals ecoreEnumLiteral="game.ecore#//Axis/X"/>
+      <genEnumLiterals ecoreEnumLiteral="game.ecore#//Axis/Y"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="game.ecore#//Operation">
+      <genEnumLiterals ecoreEnumLiteral="game.ecore#//Operation/SET"/>
+      <genEnumLiterals ecoreEnumLiteral="game.ecore#//Operation/INCREMENT"/>
+      <genEnumLiterals ecoreEnumLiteral="game.ecore#//Operation/DECREMENT"/>
+    </genEnums>
+    <genClasses ecoreClass="game.ecore#//Game">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Game/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//Game/scenes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//Game/stage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//Game/sprites"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//Game/sounds"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//Game/sheets"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="game.ecore#//Scene">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Scene/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//Scene/follow"/>
+    </genClasses>
+    <genClasses ecoreClass="game.ecore#//TMX">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//TMX/sprites"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//TMX/tiles"/>
+    </genClasses>
+    <genClasses ecoreClass="game.ecore#//Sheet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Sheet/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//Sheet/sprites"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//Sheet/animations"/>
+    </genClasses>
+    <genClasses ecoreClass="game.ecore#//Animation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Animation/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Animation/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="game.ecore#//Event">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//Event/applyOn"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//Event/changeTo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//Event/actions"/>
+    </genClasses>
+    <genClasses ecoreClass="game.ecore#//Collision">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Collision/orientation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//Collision/source"/>
+    </genClasses>
+    <genClasses ecoreClass="game.ecore#//Sensor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Sensor/orientation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//Sensor/source"/>
+    </genClasses>
+    <genClasses ecoreClass="game.ecore#//KeyEvent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//KeyEvent/keyDown"/>
+    </genClasses>
+    <genClasses ecoreClass="game.ecore#//ArrowKey">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//ArrowKey/orientation"/>
+    </genClasses>
+    <genClasses ecoreClass="game.ecore#//FireKey"/>
+    <genClasses ecoreClass="game.ecore#//ActionKey"/>
+    <genClasses ecoreClass="game.ecore#//ConfirmKey"/>
+    <genClasses ecoreClass="game.ecore#//EscapeKey"/>
+    <genClasses ecoreClass="game.ecore#//PauseKey"/>
+    <genClasses ecoreClass="game.ecore#//SaveKey"/>
+    <genClasses ecoreClass="game.ecore#//Jump"/>
+    <genClasses ecoreClass="game.ecore#//Jumped"/>
+    <genClasses ecoreClass="game.ecore#//MoveEvent"/>
+    <genClasses ecoreClass="game.ecore#//MoveDown"/>
+    <genClasses ecoreClass="game.ecore#//MoveUp"/>
+    <genClasses ecoreClass="game.ecore#//MoveStopVerticaly"/>
+    <genClasses ecoreClass="game.ecore#//MoveLeft"/>
+    <genClasses ecoreClass="game.ecore#//MoveRight"/>
+    <genClasses ecoreClass="game.ecore#//MoveStopHorizontaly"/>
+    <genClasses ecoreClass="game.ecore#//Sprite">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Sprite/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Sprite/className"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//Sprite/properties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Sprite/move"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//Sprite/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//Sprite/defaultState"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//Sprite/sheet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//Sprite/states"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//Sprite/events"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//Sprite/hitboxes"/>
+    </genClasses>
+    <genClasses ecoreClass="game.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Property/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//Property/display"/>
+    </genClasses>
+    <genClasses ecoreClass="game.ecore#//Sound">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Sound/name"/>
+    </genClasses>
+    <genClasses ecoreClass="game.ecore#//Tile">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Tile/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Tile/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//Tile/properties"/>
+    </genClasses>
+    <genClasses ecoreClass="game.ecore#//State">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//State/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//State/actions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//State/events"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//State/hitbox"/>
+    </genClasses>
+    <genClasses ecoreClass="game.ecore#//Action"/>
+    <genClasses ecoreClass="game.ecore#//ChangeScene">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//ChangeScene/scene"/>
+    </genClasses>
+    <genClasses ecoreClass="game.ecore#//Play">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//Play/sound"/>
+    </genClasses>
+    <genClasses ecoreClass="game.ecore#//Animate">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//Animate/animation"/>
+    </genClasses>
+    <genClasses ecoreClass="game.ecore#//ChangeProperty">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//ChangeProperty/property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//ChangeProperty/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference game.ecore#//ChangeProperty/value"/>
+    </genClasses>
+    <genClasses ecoreClass="game.ecore#//Destroy"/>
+    <genClasses image="false" ecoreClass="game.ecore#//HitBox">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//HitBox/name"/>
+    </genClasses>
+    <genClasses ecoreClass="game.ecore#//UI">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//UI/widgets"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="game.ecore#//Widget">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Widget/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Widget/y"/>
+    </genClasses>
+    <genClasses ecoreClass="game.ecore#//Container">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Container/border"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Container/radius"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Container/stroke"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Container/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Container/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Container/fill"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Container/shadow"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Container/shadowColor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//Container/widgets"/>
+    </genClasses>
+    <genClasses ecoreClass="game.ecore#//Text">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Text/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Text/weight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Text/size"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Text/align"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Text/family"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Text/color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Text/outline"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Text/outlineWidth"/>
+    </genClasses>
+    <genClasses ecoreClass="game.ecore#//Button">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Button/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Button/keyActionName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Button/font"/>
+    </genClasses>
+    <genClasses ecoreClass="game.ecore#//IFrame">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//IFrame/stylePosition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//IFrame/styleZIndex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//IFrame/attributeFrameborder"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//IFrame/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//IFrame/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//IFrame/height"/>
+    </genClasses>
+    <genClasses ecoreClass="game.ecore#//HTMLElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//HTMLElement/html"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="game.ecore#//DisplayProperty">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//DisplayProperty/property"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

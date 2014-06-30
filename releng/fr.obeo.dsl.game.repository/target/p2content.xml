@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='201406301156.Game_DSL' version='1.0.0.0-1cDCjs67735A3E9355CE'>
+    <properties size='2'>
+      <property name='org.eclipse.equinox.p2.name' value='Game DSL'/>
+      <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+    </properties>
+    <provides size='1'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='201406301156.Game_DSL' version='1.0.0.0-1cDCjs67735A3E9355CE'/>
+    </provides>
+    <requires size='1'>
+      <required namespace='org.eclipse.equinox.p2.iu' name='fr.obeo.dsl.game.feature.feature.group' range='[0.0.1.201406301156,0.0.1.201406301156]'/>
+    </requires>
+    <touchpoint id='null' version='0.0.0'/>
+  </unit>
+</units>

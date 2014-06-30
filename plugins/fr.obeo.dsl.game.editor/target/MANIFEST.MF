@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Export-Package: fr.obeo.dsl.game.presentation
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+Bundle-Name: %pluginName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.core.resources;vi
+ sibility:=reexport,fr.obeo.dsl.game.edit;visibility:=reexport,org.ecl
+ ipse.emf.ecore.xmi;visibility:=reexport,org.eclipse.emf.edit.ui;visib
+ ility:=reexport,org.eclipse.ui.ide;visibility:=reexport
+Bundle-Vendor: %providerName
+Bundle-Version: 0.0.1.201406301156
+Bundle-ManifestVersion: 2
+Bundle-Activator: fr.obeo.dsl.game.presentation.GameEditorPlugin$Imple
+ mentation
+Bundle-SymbolicName: fr.obeo.dsl.game.editor;singleton:=true
+

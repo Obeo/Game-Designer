@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <prerequisites>
+    <maven>3.0</maven>
+  </prerequisites>
+	
+  <groupId>GameDSL</groupId>
+  <artifactId>fr.obeo.dsl.game.parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
+  <name>Game DSL Parent</name>
+  
+  <licenses>
+      <license>
+	<name>TODO</name>
+	<comments>
+	TODO
+	</comments>
+      </license>
+  </licenses>
+  
+  <properties>
+    <tycho-version>0.18.1</tycho-version>
+  </properties>
+  
+  <modules>
+    <module>../../releng/fr.obeo.dsl.game.feature</module>
+    <module>../../releng/fr.obeo.dsl.game.repository</module>
+
+    <module>../../plugins/fr.obeo.dsl.game</module>
+    <module>../../plugins/fr.obeo.dsl.game.edit</module>
+    <module>../../plugins/fr.obeo.dsl.game.editor</module>
+
+    <module>../../plugins/fr.obeo.generator.game</module>
+  </modules>
+  
+  <repositories>
+    <repository>
+      <id>kepler</id>
+      <layout>p2</layout>
+      <url>http://mirror.update.eclipse.obeo.fr/release-kepler-4.3/</url>
+    </repository>
+  </repositories>
+  
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.eclipse.acceleo</groupId>
+          <artifactId>org.eclipse.acceleo.maven</artifactId>
+          <version>3.5.0-SNAPSHOT</version>
+          <executions>
+            <execution>
+              <id>acceleo-compile</id>
+              <phase>compile</phase>
+              <goals>
+                <goal>acceleo-compile</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+      <plugins>
+          <plugin>
+              <groupId>org.eclipse.tycho</groupId>
+              <artifactId>target-platform-configuration</artifactId>
+              <version>${tycho-version}</version>
+              <configuration>
+                  <resolver>p2</resolver>
+                  <environments>
+                      <environment>
+                          <os>linux</os>
+                          <ws>gtk</ws>
+                          <arch>x86</arch>
+                      </environment>
+                      <environment>
+                          <os>win32</os>
+                          <ws>win32</ws>
+                          <arch>x86</arch>
+                      </environment>
+                      <environment>
+                          <os>win32</os>
+                          <ws>win32</ws>
+                          <arch>x86_64</arch>
+                      </environment>
+                      <environment>
+                          <os>linux</os>
+                          <ws>gtk</ws>
+                          <arch>x86_64</arch>
+                      </environment>
+                      <environment>
+                          <os>macosx</os>
+                          <ws>cocoa</ws>
+                          <arch>x86_64</arch>
+                      </environment>
+                  </environments>
+              </configuration>            
+          </plugin>
+	    <plugin>
+          <groupId>org.eclipse.tycho</groupId>
+          <artifactId>tycho-maven-plugin</artifactId>
+          <version>${tycho-version}</version>
+          <extensions>true</extensions>
+        </plugin>
+      </plugins>
+  </build>
+
+</project>
